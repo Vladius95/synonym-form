@@ -1,0 +1,14 @@
+@import "static/css/design/colors.scss";
+@import "static/css/design/typography.scss";
+
+.synonyms-form-name-input {
+  &__label {
+    color: $color_gray2-lighter;
+    @include tg_common();
+  }
+
+  &__input-name {
+    margin-bottom: 5px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../css/design/colors.scss";
+@import "../../../css/design/typography.scss";
+
+@mixin fillThemeButton($color) {
+  background-color: $color;
+
+  &:focus {
+    padding: 6px 10px;
+    color: $color;
+    border: 2px solid $color;
+    outline: $color;
+  }
+
+  &:disabled {
+    background-color: rgba($color, 50%);
+    opacity: 0.5;
+  }
+}
+
+.button {
+  padding: 8px 12px;
+  color: $color_white;
+
+  @include tg_common();
+  font-weight: 700;
+
+  text-transform: lowercase;
+  border-radius: 3px;
+
+  cursor: pointer;
+  appearance: none;
+
+  &.blue {
+    @include fillThemeButton($color_brand100);
+  }
+
+  &.green {
+    @include fillThemeButton($color_green);
+  }
+
+  &.red {
+    @include fillThemeButton($color_danger);
+  }
+
+  &:focus {
+    background-color: $color_white;
+  }
+}

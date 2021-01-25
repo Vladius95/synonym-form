@@ -1,0 +1,46 @@
+@import "static/css/design/colors.scss";
+@import "static/css/design/typography.scss";
+
+.text-field {
+  &__input {
+    width: 100%;
+    padding: 11px 0;
+    color: $color_black;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid $color_brand50;
+
+    border-radius: 0;
+    appearance: none;
+    @include tg_body();
+
+    &::placeholder {
+      color: $color_brand50;
+      @include tg_body();
+    }
+
+    &:focus {
+      color: $color_brand100;
+      border-color: $color_brand100;
+      outline: none;
+    }
+
+    &:not([value=""]):focus {
+      color: $color_black;
+    }
+  }
+
+  &__error {
+    display: flex;
+    margin-top: 4px;
+  }
+
+  &__error-icon {
+    margin-right: 6px;
+  }
+
+  &__error-text {
+    color: $color_error;
+    @include tg_common();
+  }
+}

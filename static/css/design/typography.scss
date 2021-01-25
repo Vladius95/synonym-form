@@ -1,0 +1,14 @@
+@mixin tg_body {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@mixin tg_common {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+@mixin tg_head3 {
+  font-size: 20px;
+  line-height: 28px;
+}

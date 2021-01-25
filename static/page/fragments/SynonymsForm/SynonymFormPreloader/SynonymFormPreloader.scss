@@ -1,0 +1,28 @@
+@import "static/css/design/colors.scss";
+
+.synonym-form-preloader {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px;
+  background-color: $color_white;
+  border-radius: 3px;
+
+  &__text {
+    width: 25%;
+    height: 18px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__action {
+    width: 14px;
+    height: 14px;
+
+    &:first-of-type {
+      margin-right: 14px;
+    }
+  }
+}

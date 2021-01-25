@@ -1,0 +1,19 @@
+@import "static/css/design/colors.scss";
+@import "static/css/design/typography.scss";
+
+.synonyms-form-tip {
+  display: flex;
+  align-items: center;
+
+  &__help {
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+  }
+
+  &__text {
+    color: $color_gray2;
+    font-weight: 700;
+    @include tg_body();
+  }
+}

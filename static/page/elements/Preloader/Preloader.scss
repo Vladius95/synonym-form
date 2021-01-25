@@ -1,0 +1,68 @@
+@import "static/css/design/colors.scss";
+
+@mixin _preloader-gradient($color, $colorSecond) {
+  background: linear-gradient(135deg, $color 0%, $colorSecond, $color 100%);
+}
+
+.preloader {
+  $pGradientColor: $color_gray2-light;
+  $pSecondColor: rgba(122, 131, 161, 0.21);
+
+  $timing: 3s;
+  $timing-function: ease-in-out;
+
+  display: flex;
+  // width: 100%;
+  // height: 100%;
+  background-size: 200% 200%;
+
+  border-radius: 5px;
+  -webkit-animation: Preloader $timing $timing-function infinite;
+  -moz-animation: Preloader $timing $timing-function infinite;
+  animation: Preloader $timing $timing-function infinite;
+  will-change: background-position;
+
+  // @include _preloader-gradient($pGradientColor, $pSecondColor);
+
+  &.circle {
+    border-radius: 50%;
+  }
+
+  @include _preloader-gradient($pGradientColor, $pSecondColor);
+
+  @-webkit-keyframes Preloader {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @-moz-keyframes Preloader {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @keyframes Preloader {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "static/css/consts.scss";
+
+.synonyms-form-footer {
+  &__btn_edit {
+    margin-right: 14px;
+
+    @media (max-width: $mini_mobile_width) {
+      margin-bottom: 8px;
+    }
+  }
+}

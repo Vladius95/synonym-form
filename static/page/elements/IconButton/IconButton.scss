@@ -1,0 +1,12 @@
+.icon-button {
+  cursor: pointer;
+
+  &:not(.icon-button_always-active) {
+    opacity: 0.5;
+    transition: opacity 250ms ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
