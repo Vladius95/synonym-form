@@ -1,0 +1,5 @@
+@import "static/css/mixins";
+
+@include fontFace("CirceRegular", "fonts/Circe-Regular", 400);
+
+@include fontFace("CirceBold", "fonts/Circe-Bold", 400);

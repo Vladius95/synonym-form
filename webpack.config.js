@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const definePlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || "true")),
@@ -26,6 +27,7 @@ module.exports = {
   plugins: [
     definePlugin,
     new BrowserSyncPlugin({
+      // contentBase: path.join(__dirname, "build"),
       host: process.env.IP || "localhost",
       port: process.env.PORT || 3000,
       server: {
@@ -37,6 +39,14 @@ module.exports = {
       title: "Synonym Form",
       template: "static/index.html",
       filename: "index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, "static/fonts"),
+          to: path.join(__dirname, "build/fonts"),
+        },
+      ],
     }),
   ],
   module: {
@@ -75,6 +85,18 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.woff$/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[contenthash].[ext]",
+      //         outputPath: "fonts/",
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
   devtool: "source-map",

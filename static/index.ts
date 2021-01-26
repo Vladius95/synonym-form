@@ -1,4 +1,5 @@
 import "static/css/reset.scss";
+import "static/css/design/fonts.scss";
 
 import * as ReactDOM from "react-dom";
 import * as React from "react";

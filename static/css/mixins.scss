@@ -1,0 +1,8 @@
+@mixin fontFace($name, $path, $bold) {
+  @font-face {
+    // font-weight: $bold;
+    font-family: $name;
+    font-style: normal;
+    src: url($path + ".woff") format("woff"), url($path + ".ttf") format("ttf");
+  }
+}

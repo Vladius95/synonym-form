@@ -1,14 +1,19 @@
 @mixin tg_body {
   font-size: 16px;
+  font-family: "CirceRegular", sans-serif;
   line-height: 18px;
+  letter-spacing: 0.005em;
 }
 
 @mixin tg_common {
   font-size: 14px;
+  font-family: "CirceRegular", sans-serif;
   line-height: 14px;
+  letter-spacing: 0.005em;
 }
 
 @mixin tg_head3 {
   font-size: 20px;
+  font-family: "CirceBold", sans-serif;
   line-height: 28px;
 }
